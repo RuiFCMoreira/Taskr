@@ -1,0 +1,111 @@
+---
+# - name: Create a network
+#   google.cloud.gcp_compute_network:
+#     name: taskr-network
+#     auto_create_subnetworks: true
+#     project: "{{ gcp_project }}"
+#     auth_kind: "{{ auth_kind }}"
+#     service_account_file: "{{ service_account_file }}"
+#     state: present
+#   register: network
+
+- name: Get default network
+  google.cloud.gcp_compute_network_info:
+    filters:
+      - name = default
+    project: "{{ gcp_project }}"
+    auth_kind: "{{ auth_kind }}"
+    service_account_file: "{{ service_account_file }}"
+  register: network_default
+
+- debug:
+   var: network_default
+
+- name: Setup instances for backend and frontend
+  ansible.builtin.include_tasks: instance-group.yaml
+  vars:
+    network: "{{ network_default }}"
+  loop:
+    - backend
+    - frontend
+
+# - debug:
+#     var: network
+
+- name: Get sql instance
+  google.cloud.gcp_sql_instance_info:
+    project: "{{ gcp_project }}"
+    auth_kind: "{{ auth_kind }}"
+    service_account_file: "{{ service_account_file }}"
+  register: sql_instances
+
+- name: Set sql instance if exists
+  ansible.builtin.set_fact:
+    db_instance: "{{ sql_instances.resources[0] }}"
+  when: sql_instances.resources[0] is defined
+
+- name: Set sql instance ip
+  ansible.builtin.set_fact:
+    sql_instance_internal_ip: "{{ db_instance.ipAddresses[1].ipAddress }}"
+  when: sql_instances.resources[0] is defined
+
+- name: Create sql instance
+  google.cloud.gcp_sql_instance:
+    name: taskr-postgres
+    settings:
+      availability_type: "REGIONAL"
+      backup_configuration:
+        enabled: false
+      ip_configuration:
+        private_network: "{{ network_default.resources[0].selfLink }}"
+      tier: db-custom-4-7680 # para teste (custom com 2 cores e 7680 MB de memória, memoria multiplo de 256)
+    max_disk_size: 21474836480 # 20GB em bytes
+    region: "{{ gcp_region }}"
+    instance_type: "CLOUD_SQL_INSTANCE"
+    database_version: "POSTGRES_14"
+    project: "{{ gcp_project }}"
+    auth_kind: "{{ auth_kind }}"
+    service_account_file: "{{ service_account_file }}"
+    state: present
+  register: create_db_instance
+  when: sql_instances.resources[0] is undefined
+
+- name: Set sql instance if exists
+  ansible.builtin.set_fact:
+    db_instance: "{{ create_db_instance }}"
+  when: sql_instances.resources[0] is undefined
+
+- name: Set sql instance ip
+  ansible.builtin.set_fact:
+    sql_instance_internal_ip: "{{ db_instance.ipAddresses[1].ipAddress }}"
+  when: sql_instances.resources[0] is undefined
+
+- name: Create a postgres user
+  google.cloud.gcp_sql_user:
+    name: "{{ db_username }}"
+    host: ""
+    password: "{{ db_password }}"
+    instance: "{{ db_instance }}"
+    project: "{{ gcp_project }}"
+    auth_kind: "{{ auth_kind }}"
+    service_account_file: "{{ service_account_file }}"
+    state: present
+
+
+- name: Create a postgres database
+  google.cloud.gcp_sql_database:
+    name: taskr
+    instance: "{{ db_instance.name }}"
+    project: "{{ gcp_project }}"
+    auth_kind: "{{ auth_kind }}"
+    service_account_file: "{{ service_account_file }}"
+    state: present
+  register: database_created
+
+- name: Create bucket storage
+  google.cloud.gcp_storage_bucket:
+    name: taskr-storage
+    project: "{{ gcp_project }}"
+    auth_kind: "{{ auth_kind }}"
+    service_account_file: "{{ service_account_file }}"
+    state: present

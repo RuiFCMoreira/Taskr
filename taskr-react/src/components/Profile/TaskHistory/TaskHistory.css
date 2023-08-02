@@ -1,0 +1,285 @@
+.TaskHistory{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+} 
+
+.TaskHistory .taskHistoryHeader{
+    display: flex;
+    border-bottom: 1px solid gray;  
+    height: 15%;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.TaskHistory .taskHistoryHeader p {
+    width: 90%;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-top: 30px;
+    float: left;
+}
+
+.TaskHistory .taskHistoryHeader button {
+    width: 10%;
+    height: 45px;
+    margin-top: 30px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+
+.TaskHistory .taskHistoryContent{
+    height: 80%;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 15px;
+}
+
+.TaskHistory table{
+    width: 100%;
+    text-align: center;
+}
+
+.TaskHistory table td{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 10%;
+}
+
+.TaskHistory  table .columnState2 img{
+    width: 50%;
+}
+
+.TaskHistory  table .columnState2{
+    width: 5%;
+}
+
+.TaskHistory  table .columnDate2{
+    width: 10%;
+}
+
+.TaskHistory  table .columnDescription2{
+    width: 20%;
+}
+
+.TaskHistory   table .columnCategory2{
+    width: 10%;
+}
+
+.TaskHistory   table .columnProvider2{
+    width: 10%;
+}
+
+.TaskHistory   table .columnDuration2{
+    width: 7%;
+}
+
+.TaskHistory   table .columnPrice2{
+    width: 7%;
+}
+
+.TaskHistory   table .columnReviewDescription2{
+    width: 10%;
+}
+
+.TaskHistory   table .columnReviewRating2{
+    width: 10%;
+}
+
+.TaskHistory .taskHistoryContent .taskHeader table {
+    height: 1%;
+    border-top: 3px solid;
+    border-bottom: 3px solid;
+    font-weight: bold;
+}
+
+.TaskHistory .taskHistoryContent .tasksList{
+    height: 75%;
+    overflow:auto; 
+    margin-top: 5px;
+}
+
+.TaskHistory .tasksList tr{
+    border-bottom: 1px solid;
+}
+
+
+.TaskHistory .tasksList button{
+    width: 100%;
+    height: 60px;
+    margin-left: 35%;
+    margin-right: 10%;
+    border-radius: 10px;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+
+
+.TaskHistory .taskHistoryContent .taskHistoryReview{
+    display: flex;
+    height: 50%;
+    overflow-y: auto;
+
+}
+
+.TaskHistory .taskHistoryContent .taskHistoryReviewLeft{
+    width: 50%;
+}
+
+.TaskHistory .taskHistoryContent .taskHistoryReviewRight{
+    width: 50%;
+}
+
+.TaskHistory .taskHistoryContent .taskHistoryReviewLeftLine{
+    display: flex;
+    margin-left: 5%;
+}
+
+
+.TaskHistory .taskHistoryContent .taskHistoryReviewLeftLine p{
+    margin-left: 10px;
+}
+
+.TaskHistory .taskHistoryContent .taskHistoryReviewRight .taskHistoryReviewProvider {
+    display: flex;
+    margin-top: 10px;
+}
+
+.TaskHistory .taskHistoryContent .taskHistoryReviewRight .taskHistoryReviewProviderLeft{
+    float: left;
+}
+
+.TaskHistory .taskHistoryContent .taskHistoryReviewRight .taskHistoryReviewProviderLeft img{
+    width: 140px;
+    border-radius: 500px;
+}
+
+.TaskHistory .taskHistoryContent .taskHistoryReviewProviderRight{
+    margin-left: 50px;
+}
+
+.TaskHistory .taskHistoryContent .taskHistoryReviewProviderRight .taskHistoryReviewRightLine{
+    display: flex;
+}
+
+.TaskHistory .taskHistoryContent .taskHistoryReviewRightLine p{
+    margin-left: 10px;
+}
+
+
+.TaskHistory .taskHistoryContent .taskHistoryReviewAdd{
+    width: 100%;
+    height: 40%;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid gray;
+}
+
+.TaskHistory .taskHistoryReviewAdd .taskHistoryReviewInputs{
+    display: flex;
+    height: 100%;
+}
+
+.TaskHistory .taskHistoryReviewAdd .taskHistoryReviewInputs .descriptionReview{
+    width: 75%;
+}
+
+.TaskHistory .taskHistoryReviewAdd .taskHistoryReviewInputs .descriptionReview input{
+    width: 90%;
+    height: 100%;
+    margin-left: 1%;
+    border-radius: 10px;
+    
+}
+
+
+.TaskHistory .taskHistoryReviewAdd .taskHistoryReviewInputs .ratingReview{
+    width: 25%;
+
+}
+
+.TaskHistory .taskHistoryReviewAdd .taskHistoryReviewInputs .ratingReview .rating {
+    display: inline-block;
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    font-size: 50px;
+  }
+  
+  .TaskHistory .taskHistoryReviewAdd .taskHistoryReviewInputs .ratingReview .rating label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  .TaskHistory .taskHistoryReviewAdd .taskHistoryReviewInputs .ratingReview .rating label:last-child {
+    position: static;
+  }
+  
+  .TaskHistory .taskHistoryReviewAdd .taskHistoryReviewInputs .ratingReview .rating label:nth-child(1) {
+    z-index: 5;
+  }
+  
+  .TaskHistory .taskHistoryReviewAdd .taskHistoryReviewInputs .ratingReview .rating label:nth-child(2) {
+    z-index: 4;
+  }
+  
+  .TaskHistory .taskHistoryReviewAdd .taskHistoryReviewInputs .ratingReview  .rating label:nth-child(3) {
+    z-index: 3;
+  }
+  
+  .TaskHistory .taskHistoryReviewAdd .taskHistoryReviewInputs .ratingReview  .rating label:nth-child(4) {
+    z-index: 2;
+  }
+  
+  .TaskHistory .taskHistoryReviewAdd .taskHistoryReviewInputs .ratingReview  .rating label:nth-child(5) {
+    z-index: 1;
+  }
+  
+  .TaskHistory .taskHistoryReviewAdd .taskHistoryReviewInputs .ratingReview  .rating label input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  
+  .TaskHistory .taskHistoryReviewAdd .taskHistoryReviewInputs .ratingReview .rating label .icon {
+    float: left;
+    color: transparent;
+  }
+  
+  .TaskHistory .taskHistoryReviewAdd .taskHistoryReviewInputs .ratingReview .rating label:last-child .icon {
+    color: #000;
+  }
+  
+  .TaskHistory .taskHistoryReviewAdd .taskHistoryReviewInputs .ratingReview  .rating:not(:hover) label input:checked ~ .icon,
+  .TaskHistory .taskHistoryReviewAdd .taskHistoryReviewInputs .ratingReview .rating:hover label:hover input ~ .icon {
+    color: gold;
+  }
+  
+  .TaskHistory .taskHistoryReviewAdd .taskHistoryReviewInputs .ratingReview .rating label input:focus:not(:checked) ~ .icon:last-child {
+    color: #000;
+    text-shadow: 0 0 5px gold;
+  }
+
+
+
+
+
+.TaskHistory .taskHistoryReviewAdd .taskHistoryReviewInputs .ratingReview button{
+    width:80%;
+    margin-top: 15%;
+    height:25%;
+    border-radius: 10px;
+}
+
+
+.TaskHistory .Bold{
+    font-weight : bold!important ;
+}

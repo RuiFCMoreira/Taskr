@@ -1,0 +1,106 @@
+
+.TasksPendingTitle{
+    width: 95%;
+    margin-left: 2.5%;   
+    display: flex; 
+    margin-top: 10px;
+}
+
+
+.TasksPendingTitle p{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+
+.TasksPendingContent{
+    height: 600px;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 25px;
+    
+}
+
+.TasksPendingContent table{
+    width: 100%;
+    text-align: center;
+}
+
+.TasksPendingContent table td{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.TasksPendingContent  table .columnState{
+    width: 7%;
+}
+
+.TasksPendingContent  table .columnDate{
+    width: 10%;
+}
+
+.TasksPendingContent  table .columnAdress{
+    width: 18%;
+}
+
+.TasksPendingContent  table .columnDescription{
+    width: 25%;
+}
+
+.TasksPendingContent   table .columnCategory{
+    width: 10%;
+}
+
+.TasksPendingContent  table .columnProvider{
+    width: 5%;
+}
+
+.TasksPendingContent  table  .columnDuration{
+    width: 7%;
+}
+
+.TasksPendingContent  table .columnPrice{
+    width: 7%;
+}
+
+
+.TasksPendingContent  table .columnState img{
+    width: 50%;
+}
+
+.TasksPendingContent  table .columnButtonCancel{
+    width: 16%;
+}
+
+.TasksPendingContent .taskHeader table {
+    height: 1%;
+    border-top: 3px solid;
+    border-bottom: 3px solid;
+    font-weight: bold;
+}
+
+.TasksPendingContent .tasksList {
+    height: 95%;
+    overflow:auto; 
+    margin-top: 5px;
+}
+
+
+.TasksPendingContent .tasksList tr{
+    border-bottom: 1px solid;
+}
+
+.TasksPendingContent .tasksList button{
+    width: 45%;
+    height: 50px;
+    margin-right: 10%;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.TasksPendingContent .buttonsAccceptRejectTask{
+    display: flex;
+
+}

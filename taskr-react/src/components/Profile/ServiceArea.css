@@ -1,0 +1,105 @@
+.ServiceArea {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ServiceArea .add-area {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+}
+
+.ServiceArea .input-group {
+    width: 50%;
+    display: flex;  
+    flex-direction: column;
+}
+
+.ServiceArea .titulo {
+    margin-left: 20px;
+}
+
+.ServiceArea .add-new-area{
+    margin-bottom: 8%;
+    margin-left: 30px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ServiceArea .add-area-button {
+    display: flex;
+    height: 100%;
+    margin-top: 10px;
+}
+
+
+.ServiceArea .block button {
+    background-color: rgba(241, 0, 0, 0.315);
+    cursor: not-allowed;
+
+}
+
+.ServiceArea .add-area-button button {
+    margin-top: 5%;
+    height: 45px;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 12px;
+    width: 100px;
+}
+
+.ServiceArea .good button:hover {
+    background-color: rgb(161, 161, 161);
+}
+
+.ServiceArea .areas-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ServiceArea h3{
+    margin-bottom: 15px;
+}
+
+.ServiceArea .areas-view {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    overflow: auto;
+    max-height: 180px;
+}
+
+.ServiceArea .area {
+    margin-left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ServiceArea .area p {
+    width: 75%;
+    padding: 10px 0px;
+    border: 2px solid black;
+    text-align: center;
+    border-radius: 12px 12px;
+}
+
+.ServiceArea .area img{
+    margin-left: 5%;
+    width: 8%;
+    height: auto;
+    cursor: pointer;
+}
+
+.form-select-service{
+    width: 200px;
+    margin-right: 3%;
+}

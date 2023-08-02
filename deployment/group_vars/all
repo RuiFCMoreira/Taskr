@@ -1,0 +1,29 @@
+gcp_zone: europe-southwest1-c
+gcp_region: europe-southwest1
+gcp_project: aa-sic-taskr
+auth_kind: serviceaccount
+service_account_file: credentials.json
+project: aa-sic-taskr
+
+taskr_backend_instances: 2
+taskr_frontend_instances: 2
+preemtible: false
+backend_machine_type: n2-highcpu-2
+frontend_machine_type: e2-highcpu-2
+
+db_username: postgres
+db_password: postgres_password_15555
+
+taskr_backend_version: v0.61
+taskr_frontend_version: v0.61
+
+github_username: pedropereira98
+github_pull_key: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          65373261623363333264303537366461626433643834346362333762306133323464336463343163
+          3836313634633331386136353962383030346536663935340a333365633864623266643566363334
+          32336538613239346632613637333939313137623935333330343666663961306330643431626434
+          3331386436303862340a636437643864333131313837353035346430616363323031346236353335
+          30323039363630626239366236306662306636633663303733396631616566353461663931616363
+          6537663235303339663061363133363734373038633462633864
+# gcp_credentials: "{{ lookup('file', 'credentials.json') }}"

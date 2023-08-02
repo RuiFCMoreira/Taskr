@@ -1,0 +1,27 @@
+.table-availability-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    height: auto;
+
+}
+
+
+.table-availability{
+    width: 50%;
+    justify-content: center;
+
+}
+
+
+.table-availability th tr{
+    width: 150px;
+}
+
+.availability-btn{
+    width: 200px;
+    margin-bottom: 50px;
+    
+}

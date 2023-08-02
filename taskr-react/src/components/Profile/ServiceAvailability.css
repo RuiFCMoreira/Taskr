@@ -1,0 +1,38 @@
+.availability-link-btn{
+    display: flex;
+    text-decoration: none;
+    color: black;
+    border-radius: 12px 12px;
+    background-color: rgb(236, 236, 236);
+    justify-content: center;
+    width: 120px;
+    padding: 10px 0px;  
+    border: 2px solid #000000;
+
+
+}
+
+.availability-link-btn:hover{
+    display: flex;
+    text-decoration: none;
+    color: black;
+    border-radius: 12px 12px;
+    background-color: rgb(172, 172, 172);
+    justify-content: center;
+    width: 120px;
+    padding: 10px 0px;  
+    border: 2px solid #000000;
+}
+
+
+.availability-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.availability-description{
+    width: 50%;
+
+}

@@ -1,0 +1,35 @@
+- name: Log into github registry
+  community.docker.docker_login:
+    registry_url: ghcr.io
+    username: "{{ github_username }}"
+    password: "{{ github_pull_key }}"
+  retries: 3
+
+- name: Pull frontend image from Github
+  community.docker.docker_image:
+    name: ghcr.io/miguelsantacruz/taskr-frontend
+    repository: taskr-frontend
+    tag: "{{ taskr_frontend_version }}"  # default = latest
+    source: pull
+    state: present
+    debug: true
+
+- name: Log out of github registry
+  community.docker.docker_login:
+    registry_url: ghcr.io
+    state: absent
+
+- debug:
+    msg: "{{ hostvars.localhost.backend_load_balancer.address }}"
+
+- name: Start frontend container
+  community.docker.docker_container:
+    name: taskr-frontend
+    image: taskr-frontend:{{ taskr_frontend_version }}
+    recreate: true
+    restart: true
+    env:
+      REACT_APP_BACKEND_IP: "{{ hostvars.localhost.backend_load_balancer.address }}"
+    published_ports:
+      - 80:3000
+    state: started

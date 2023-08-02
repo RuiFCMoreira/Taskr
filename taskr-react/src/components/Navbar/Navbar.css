@@ -1,0 +1,61 @@
+
+.navbar {
+    margin: 0 auto;
+    padding: 0;
+    border-bottom: 1px solid gray;
+    height: 117px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+}
+
+.navbar img{
+    width: 40px;
+}
+
+.navbar ul {
+    margin-top: 0;
+    margin-right: 20px;
+    list-style-type: none;
+    margin-left: 10%;
+    float: right;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    
+}
+
+.navbar li {
+    float:left;
+    padding-right: 1rem;
+    margin-right: 10px;
+}
+
+.navbar .logo{
+    margin-top: 0;
+    margin-left: 15px;
+    float: left;
+    width: 100px;
+    height: 100%;
+}
+
+.button-nav {
+    display: flex;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    border: 2px solid black; /* Green */
+    font-size: 20px;
+    border-radius: 7px;
+    height: 50px;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#Sign{
+    background-color: black;
+    color: white;
+}

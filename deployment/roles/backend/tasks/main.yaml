@@ -1,0 +1,47 @@
+- name: Log into github registry
+  community.docker.docker_login:
+    registry_url: ghcr.io
+    username: "{{ github_username }}"
+    password: "{{ github_pull_key }}"
+  retries: 3
+
+- name: Pull backend image from Github
+  community.docker.docker_image:
+    name: ghcr.io/miguelsantacruz/taskr-backend
+    repository: taskr-backend
+    tag: "{{ taskr_backend_version }}"  # default = latest
+    source: pull
+    state: present
+    debug: true
+
+- name: Log out of github registry
+  community.docker.docker_login:
+    registry_url: ghcr.io
+    state: absent
+
+
+- name: Set others to not initialize data
+  ansible.builtin.set_fact:
+    data_initialize: never
+
+- name: Set one to initialize data
+  ansible.builtin.set_fact:
+    data_initialize: always
+  when: inventory_hostname == ansible_play_hosts[0] and hostvars.localhost.database_created.changed
+
+- name: Start backend container
+  community.docker.docker_container:
+    name: taskr-backend
+    image: taskr-backend:{{ taskr_backend_version }}
+    recreate: true
+    restart: true
+    env:
+      POSTGRES_HOST: "{{ hostvars.localhost.sql_instance_internal_ip }}"
+      POSTGRES_USER: "{{ db_username }}"
+      POSTGRES_PASSWORD: "{{ db_password }}"
+      DATA_INITIALIZE: "{{ data_initialize }}"
+    exposed_ports:
+      - 8080
+    published_ports:
+      - 8080:8080
+    state: started

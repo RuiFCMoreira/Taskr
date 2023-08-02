@@ -1,0 +1,190 @@
+
+
+.formServiceConfirmDiv{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 9%;
+    margin-bottom: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    padding: 20px;
+
+}
+.confirm-container{
+    display: flex;
+    justify-content: center;
+}
+
+.typeService{
+    display: flex;
+    justify-content: center;
+}
+
+.dateHourDescription{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.row-confirm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:50px;
+}
+
+.right-column-confirm{
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.adress-confirm{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.providerDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.row-confirm-row{
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    margin-top: 0;
+    margin-bottom: 0;
+   
+}
+
+
+
+.row-confirm-row img{
+    width: 25px;
+    margin-right: 10px;
+   
+}
+
+.row-confirm-row p{
+    margin-left: 10px;
+}
+
+ .taskLocation {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    
+
+}
+
+.taskLocation h5{
+  margin: auto;
+  margin-bottom: 15px;
+    
+
+}
+
+.taskDescription {
+   display: flex;
+   flex-direction: column;
+   margin-top: 20px;
+   
+  }
+
+  .taskDescription h5{
+    margin : auto;
+    margin-bottom: 15px;
+    
+   }
+
+
+
+ .correctData{
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+}
+
+.formServiceConfirmDiv .checkBox{
+    margin-left: 20px;
+}
+
+.formServiceConfirmDiv .formService4buttons {
+    display: flex;
+    margin-top: 20px;
+    
+
+}
+
+.left-btn-confirm{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.right-btn-confirm{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.formServiceConfirmDiv .formService4edit{
+    background-color: white;
+    border-radius: 5px;
+}
+
+.formServiceConfirmDiv .formService4confirm{
+    background-color: white;
+    border-radius: 5px;
+}
+
+
+.reservation-confirm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.formServiceConfirmDiv .reservation-confirm .providerPhoto img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100% 100%;
+}
+
+.formServiceConfirmDiv .reservation-confirm .providerProfile {
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.formServiceConfirmDiv .reservation-confirm .providerProfile:hover {
+    font-weight: bolder;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.description-confirm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.description-confirm p{
+    margin: 0;
+}

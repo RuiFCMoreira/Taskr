@@ -1,0 +1,143 @@
+.ManageProvidersTitle{
+    width: 95%;
+    margin-left: 2.5%;   
+    display: flex; 
+    margin-top: 10px;
+}
+
+
+.ManageProvidersTitle p{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.ManageProvidersContent{
+    height: 650px;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 25px;
+}
+
+.ManageProvidersContent .selectState{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+    
+    
+.ManageProvidersContent .selectState button{
+border-radius: 16px 16px;
+padding:10px 15px;
+font-weight: 700;
+margin-left: 3%;
+margin-right: 3%;
+width: 150px;
+}
+
+.ManageProvidersContent .buttonSelected{
+    background-color: rgba(24, 212, 40, 0.514);
+    border: rgba(24, 212, 40, 0.719) solid ;
+}
+
+.ManageProvidersContent .butonFree{
+border: rgb(91, 91, 91) solid ;
+}
+
+
+.ManageProvidersContent table{
+    width: 100%;
+    text-align: center;
+}
+
+.ManageProvidersContent table td{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-content: center;
+}
+
+.ManageProvidersContent .providersHeader table{
+    height: 1%;
+    border-top: 3px solid;
+    border-bottom: 3px solid;
+    font-weight: bold;
+}
+
+.ManageProvidersContent .providersList{
+    height: 90%;
+    overflow:auto; 
+    margin-top: 5px;
+}
+
+.ManageProvidersContent .providersList button{
+    width: 45%;
+    height: 50px;
+    margin-right: 10%;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.ManageProvidersContent .photoProvider {
+    width: 20%;
+}
+
+
+
+.ManageProvidersContent .photoProvider img {
+    width: 130px;
+    height: 130px;
+    border-radius: 500px;
+}
+
+
+.ManageProvidersContent .nameProvider {
+    width: 15%;
+}
+
+.ManageProvidersContent .contactProvider {
+    width: 15%;
+}
+
+.ManageProvidersContent .line{
+    display: flex;
+}
+
+.ManageProvidersContent .line img{
+    width: 20px;
+    height: 20px;
+}
+
+.ManageProvidersContent  .line p{
+    position: relative;
+    margin-left: 5%;
+    top: -0.2em
+}
+
+.ManageProvidersContent .stateProvider {
+    width: 10%;
+}
+
+.ManageProvidersContent .stateProvider img{
+    width: 40%;
+}
+
+.ManageProvidersContent .reviewsProvider {
+    width: 20%;
+}
+
+
+.ManageProvidersContent .buttonsProvider {
+    width: 30%;
+}
+
+.ManageProvidersContent .buttonsProvider button {
+    width: 50%;
+    height: 80px;
+}
+
+.ManageProvidersContent .buttonsProvider .twoButtons{
+    display: flex;
+}
+
+.ManageProvidersContent .buttonsProvider .twoButtons button{
+    width: 40%;
+}

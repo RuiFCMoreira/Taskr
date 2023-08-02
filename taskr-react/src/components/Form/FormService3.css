@@ -1,0 +1,127 @@
+.Sample header {
+    background-color: #323639;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    color: white;
+}
+
+.Sample header h1 {
+    font-size: inherit;
+    margin: 0;
+}
+
+.Sample__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.Sample__container>*>* {
+    margin: 10px;
+}
+
+.Sample__container__content {
+    display: flex;
+    max-width: 100%;
+    flex-basis: 420px;
+    flex-direction: column;
+    flex-grow: 100;
+    align-items: stretch;
+    padding-top: 1em;
+}
+
+
+
+.Sample__container__content .react-calendar {
+    margin: 0 auto;
+}
+
+.container-calendar {
+    height: 350px;
+    display: flex;
+    align-items: flex-start; /* Alterado para flex-start */
+    justify-content: center;
+    margin-top: 7%;
+  }
+
+.container-calendar .calendar{
+    height: 100%;
+    text-align: center;
+    margin-right: 100px;
+}
+
+.container-calendar .availability{
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.container-calendar .availability-scroll{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    overflow: auto;
+}
+
+.container-calendar .single-availability h3{
+    margin-bottom: 15px;
+}
+
+.container-calendar .single-availability{
+    background-color: none;
+    border: 1px solid #000;
+    margin-bottom: 25px;
+    text-align: center;
+    border-radius: 10px 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.container-calendar .not-free{
+    background-color: rgba(241, 49, 49, 0.575);
+    cursor: default;
+}
+
+.container-calendar .selected{
+    background-color: rgba(26, 230, 87, 0.575);
+    cursor: default;
+}
+
+
+.formService3buttons{
+    display: flex;
+    align-items: flex-start; /* Alterado para flex-start */
+    justify-content: right;
+    padding-top: 5%;
+    margin-bottom: 8%; 
+}
+
+.formService3prev{
+    background-color: white;
+    border-radius: 5px;
+    margin-right: 2%;
+}
+
+.formService3next{
+    float: right;
+    margin-right: 34%;
+    background-color: white;
+    border-radius: 5px;
+
+}
+
+
+.container-calendar .calendar-text-color{
+    color: #000;
+}
+
+.container-calendar .highlight-monday{
+    background-color: rgba(2, 177, 54, 0.822);
+}
+
+.container-calendar .highlight-monday:hover{
+    background-color: rgba(2, 146, 45, 0.973);
+}

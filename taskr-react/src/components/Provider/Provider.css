@@ -1,0 +1,220 @@
+.Provider .profile {
+  display: flex;  
+  min-height: 20%;
+  margin-top: 2%;
+
+}
+
+
+
+.Provider  .providerInfo {
+  float: right;
+  
+}
+
+.Provider .profile .image{
+height: auto;
+width: 15%;
+float: left;
+margin-left: 5%;
+margin-right: 0%;
+margin-top: 2%;
+border-radius: 1px solid black;
+}
+
+.Provider .image img{
+height: 180px;
+width: 180px;
+border-radius: 100% 100%;
+border-radius: 1px solid black;
+}
+
+.Provider .line{
+display: flex;
+justify-content: center;
+width: 100%;
+}
+
+.Provider .line2{
+width: 85%;
+border-bottom: 1px solid    black;
+
+}
+
+.Provider .nome{
+font-size: 50px;
+}
+
+.Provider .services{
+margin-top: 2%;
+}
+
+.Provider .providerInfo img {
+width: 3%;
+height: auto;
+margin-right: 5px;
+}
+
+.Provider .services{
+margin-left: 2%;
+min-height: 30vh;
+}
+
+.Provider .services-info{
+width: 90%;
+margin-left: 4%;
+margin-right: 4%;
+margin-top: 4%;
+display: flex;
+flex-wrap: nowrap;
+overflow-x: auto;
+justify-content: center;
+}
+
+.Provider .service-info p{
+margin-top: 5px;
+margin-bottom: 0;
+overflow-wrap: anywhere;
+}
+
+.Provider .service-info {
+flex: 0 0 auto;
+margin-right: 20px;
+margin-bottom: 15px;
+width: 40%;
+border: solid black;
+border-radius: 20px 20px;
+padding: 40px;
+text-align: left;
+
+}
+
+
+
+.Provider .service-name{
+display: flex;
+justify-content: space-between;
+}
+
+.Provider .price{
+font-size: 25px;
+font-weight: 500;
+color: rgb(90, 90, 90);
+}
+
+.Provider .service-category{
+text-align: center;
+border:none;
+width: 100%;
+border-radius: 25px 25px;
+margin-bottom: 2%;
+}
+
+.Provider .service-category-info{
+padding-top: 3%;
+}
+
+.Provider .service-title{
+padding-bottom: 0.5%;
+font-size: 45px;
+text-align: center;
+
+}
+.Provider .button-moving {
+  display: flex;
+  justify-content: center;
+}
+
+
+.Provider .button-moving button{
+border-radius: 16px 16px;
+padding:10px 15px;
+font-weight: 700;
+margin-left: 3%;
+margin-right: 3%;
+width: 10%;
+}
+
+.Provider .buttonSelected{
+background-color: rgba(24, 212, 40, 0.514);
+border: rgba(24, 212, 40, 0.719) solid ;
+}
+
+.Provider .butonFree{
+border: rgb(91, 91, 91) solid ;
+}
+
+.Provider  .reviewHeader table {
+height: 1%;
+border-top: 3px solid;
+border-bottom: 3px solid;
+font-weight: bold;
+}
+
+.Provider .reviewList {
+height: 95%;
+overflow:auto; 
+margin-top: 5px;
+}
+
+
+.Provider .reviewList tr{
+border-bottom: 1px solid;
+}
+
+
+
+.Provider .ReviewsContent{
+height: 600px;
+width: 95%;
+margin-left: 2.5%;
+margin-top: 25px;
+
+}
+
+.Provider .ReviewsContent table{
+width: 100%;
+text-align: center;
+}
+
+.Provider .ReviewsContent table td{
+padding-top: 20px;
+padding-bottom: 20px;
+}
+
+.Provider .ReviewsContent  table .columnService{
+width: 25%;
+}
+
+.Provider .ReviewsContent  table .columnRating{
+width: 10%;
+}
+
+.Provider .ReviewsContent  table .columnDescription{
+width: 25%;
+}
+
+.Provider .service-info button{
+background-color: white;
+border: 1px black solid;
+margin-top: 25px;
+width: 120px;
+height: 40px;
+border-radius: 5px 5px;
+text-align: center;
+}
+
+
+.Provider .reviewTitle{
+width: 95%;
+margin-left: 2.5%;   
+display: flex; 
+margin-top: 10px;
+justify-content: center;
+}
+
+
+.Provider .reviewTitle p{
+font-size: 30px;
+font-weight: bold;
+}

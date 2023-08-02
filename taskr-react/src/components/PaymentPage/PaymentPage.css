@@ -1,0 +1,84 @@
+.payment-all{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.payment-container{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.payment-methods{
+    display: flex;
+}
+
+.paymentMethod {
+    margin-right: 50px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.paymentMethod img{
+    width: 100px;
+
+}
+
+.show-price{
+    margin-top: 50px;
+}
+
+
+
+
+.payment-all.form-group {
+margin-bottom: 20px;
+}
+
+.payment-all {
+margin-bottom: 5px;
+font-weight: bold;
+}
+
+.payment-all [type="text"],
+.payment-all [type="number"],
+.payment-all [type="email"],
+.payment-all [type="password"] {
+width: 100%;
+padding: 10px;
+font-size: 16px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+.payment-all .button {
+width: 100%;
+padding: 10px;
+font-size: 16px;
+text-align: center;
+background-color: #000000;
+color: white;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+.payment-all .button:hover {
+background-color: #494949;
+}
+
+.footer-container{
+    margin-top: 250px;
+}
+
+.show-price{
+    margin-bottom: 50px;
+}

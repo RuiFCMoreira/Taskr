@@ -1,0 +1,76 @@
+.Profile{
+    margin-top: 5%;
+}
+
+
+.Profile .profileBox{
+    width: 60%;
+    height: 600px;
+    border-radius: 5px;
+    border: 3px solid gray;
+    display: flex;
+    margin: auto;
+}
+
+
+.Profile .profileBoxBig{
+    width: 90%;
+    height: 600px;
+    border-radius: 5px;
+    border: 3px solid gray;
+    display: flex;
+    margin: auto;
+}
+
+.Profile .profileBoxCollumn1{
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Profile .profileBoxCollumn1 button{
+    height: 33.4%;
+    border: none;
+    border-right: 3px solid gray;
+}
+
+.Profile .profileBoxCollumn1 .free{
+    background-color: white;
+}
+
+.Profile .profileBoxCollumn1 .selected{
+    background-color: rgb(192, 192, 192);
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.Profile .profileBoxCollumn2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Profile .profileBoxCollumn2 .menuFree{
+    display: none;
+}
+
+
+.Profile .profileBoxCollumn2 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.Profile .profileBoxCollumn2 .taskHistorySelected{
+    height: 100%;
+}
+
+.Profile .noDisplay {
+    display: none;
+}
+
+.Profile .serviceProfileSelected{
+    height: 100%;
+}

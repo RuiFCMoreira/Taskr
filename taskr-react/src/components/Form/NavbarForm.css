@@ -1,0 +1,216 @@
+
+.navbarForm {
+    margin: 0 auto;
+    padding: 0;
+    border-bottom: 1px solid gray;
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.logoForm{
+    width: 100px;
+    margin-left: 5%;
+}
+
+
+.progressBarDiv{
+    width: 70%;
+    float: right;
+    margin-left: 15%;
+    margin-top: 1%;
+}
+
+.progressBar{
+    margin-top: 10px;
+    margin-right: 20%;
+    height:10px;
+    width:100%;
+    background-color: white;
+    display: flex;
+}
+
+.step1{
+    width: 22%;
+}
+
+.step1bar{
+    background-color: rgb(192,192,192);
+    height:10px;
+    width:100%;
+    border-radius: 25px;
+    border: solid;
+}
+
+.step1Circle{
+    position:relative;
+    margin-left: 95%;
+    height: 22px;
+    width: 22px;
+    border-radius: 50px;
+    border: solid;
+    background-color: white;
+    top: -0.9em;
+    justify-content: center;
+}
+
+.step1CircleText{
+    position:relative;
+    height: 5px;
+    width: 5px;
+    margin-left: 5px;
+    top: -0.2em
+}
+
+.step2{
+    width: 22%;
+}
+
+.step2bar{
+    background-color: white;
+    height:10px;
+    width:100%;
+    border-radius: 25px;
+    border: solid;
+}
+
+.step2barFill{
+    background-color: rgb(192,192,192);
+    height:10px;
+    width:100%;
+    border-radius: 25px;
+    border: solid;
+}
+
+.step2Circle{
+    position:relative;
+    margin-left: 95%;
+    height: 22px;
+    width: 22px;
+    border-radius: 50px;
+    border: solid;
+    background-color: white;
+    top: -0.9em;
+    justify-content: center;
+}
+
+.step2CircleText{
+    position:relative;
+    height: 5px;
+    width: 5px;
+    margin-left: 5px;
+    top: -0.2em
+}
+
+
+
+.step3{
+    width: 22%;
+}
+
+.step3bar{
+    background-color: white;
+    height:10px;
+    width:100%;
+    border-radius: 25px;
+    border: solid;
+}
+
+.step3barFill{
+    background-color: rgb(192,192,192);
+    height:10px;
+    width:100%;
+    border-radius: 25px;
+    border: solid;
+}
+
+.step3Circle{
+    position:relative;
+    margin-left: 95%;
+    height: 22px;
+    width: 22px;
+    border-radius: 50px;
+    border: solid;
+    background-color: white;
+    justify-content: center;
+    top: -0.9em;
+}
+
+.step3CircleText{
+    position:relative;
+    height: 5px;
+    width: 5px;
+    margin-left: 5px;
+    top: -0.2em
+}
+
+
+.step4{
+    width: 22%;
+}
+
+.step4bar{
+    background-color: white;
+    height:10px;
+    width:100%;
+    border-radius: 25px;
+    border: solid;
+}
+
+.step4barFill{
+    background-color: rgb(192,192,192);
+    height:10px;
+    width:100%;
+    border-radius: 25px;
+    border: solid;
+}
+
+.step4Circle{
+    position:relative;
+    margin-left: 95%;
+    height: 22px;
+    width: 22px;
+    border-radius: 50px;
+    border: solid;
+    background-color: white;
+    justify-content: center;
+    top: -0.9em;
+}
+
+
+.step4CircleText{
+    position:relative;
+    height: 5px;
+    width: 5px;
+    margin-left: 5px;
+    top: -0.2em
+}
+
+
+
+.stepsText{
+    display: flex;
+    margin-top: 6px;
+}
+
+.step1Text{
+    margin-left: 18%;
+}
+
+
+.step2Text{
+    margin-left: 12%;
+}
+
+.step3Text{
+    margin-left: 10%;
+}
+
+.step4Text{
+    margin-left: 14%;
+}
+
+@media screen and (max-width: 720px) {
+    .stepsText {
+        display: none !important;
+}}

@@ -1,0 +1,49 @@
+.signUp{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 600px;
+}
+
+
+.signUp-form{
+    background-color: rgb(248, 248, 248);
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.signUp-form input{
+    width: 97%;
+    height: 40px;
+    
+}
+
+.signUp-form label{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-left: 25px;
+    text-align: left;
+    
+}
+
+.btn-primary, .btn-primary:hover {
+    background-color: #000000 !important;
+}
+ 
+.btn-primary:hover {
+    background-color: #252525 !important;
+}
+
+
+.btn-submit{
+    margin-top: 40px;
+}
+
+.signUp img{
+    height: 600px;
+}

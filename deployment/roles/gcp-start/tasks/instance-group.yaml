@@ -1,0 +1,181 @@
+---
+
+- name: Set taskr_instances
+  ansible.builtin.set_fact:
+    machine_type: "{{ backend_machine_type }}"
+  when: item == "backend"
+
+- name: Set taskr_instances
+  ansible.builtin.set_fact:
+    machine_type: "{{ frontend_machine_type }}"
+  when: item == "frontend"
+
+- name: Block instance template
+  block:
+    - name: Create instance template
+      google.cloud.gcp_compute_instance_template:
+        name: "taskr-{{ item }}"
+        properties:
+          machine_type: "{{ machine_type }}"
+          disks:
+            - auto_delete: 'true'
+              boot: 'true'
+              initialize_params:
+                source_image: projects/confidential-vm-images/global/images/ubuntu-minimal-2204-jammy-v20230614
+                disk_size_gb: 10
+          service_accounts:
+            - email:
+              scopes:
+                - https://www.googleapis.com/auth/devstorage.full_control
+          network_interfaces:
+            - network: "{{ network }}"
+            - access_configs:
+                - name: External NAT
+                  type: ONE_TO_ONE_NAT
+                  network_tier: PREMIUM
+          scheduling:
+            preemptible: "{{ preemtible }}"
+          labels:
+            type: "{{ item }}"
+          tags:
+            items:
+              - http-server
+              - https-server
+        project: "{{ gcp_project }}"
+        auth_kind: "{{ auth_kind }}"
+        service_account_file: "{{ service_account_file }}"
+        state: present
+      register: instance_template
+  ignore_errors: true
+
+- name: Set taskr_instances
+  ansible.builtin.set_fact:
+    port: 8080
+  when: item == "backend"
+
+- name: Set taskr_instances
+  ansible.builtin.set_fact:
+    port: 80
+  when: item == "frontend"
+
+- debug:
+    var: port
+
+- name: Create a HTTP health check
+  google.cloud.gcp_compute_http_health_check:
+    name: "http-health-check-{{ item }}"
+    healthy_threshold: 5
+    port: "{{ port }}"
+    timeout_sec: 5
+    unhealthy_threshold: 3
+    project: "{{ gcp_project }}"
+    auth_kind: "{{ auth_kind }}"
+    service_account_file: "{{ service_account_file }}"
+    state: present
+  register: health_check
+
+- name: Set taskr_instances
+  ansible.builtin.set_fact:
+    taskr_instances: "{{ taskr_backend_instances }}" 
+  when: item == "backend"
+
+- name: Set taskr_instances
+  ansible.builtin.set_fact:
+    taskr_instances: "{{ taskr_frontend_instances }}"
+  when: item == "frontend"
+
+
+- name: Create a instance group
+  google.cloud.gcp_compute_instance_group_manager:
+    name: "taskr-{{ item }}-groupmanager"
+    base_instance_name: "taskr-{{ item }}"
+    zone: "{{ gcp_zone }}"
+    named_ports:
+      - name: https
+        port: "{{ port }}"
+    instance_template: "{{ instance_template }}"
+    target_size: "{{ taskr_instances }}"
+    project: "{{ gcp_project }}"
+    auth_kind: "{{ auth_kind }}"
+    service_account_file: "{{ service_account_file }}"
+    state: present
+  register: instancegroup
+
+
+- name: Create a autoscaler
+  google.cloud.gcp_compute_autoscaler:
+    name: "taskr-{{ item }}-autoscaler"
+    target: "{{ instancegroup }}"
+    autoscaling_policy:
+      max_num_replicas: "{{ taskr_instances }}"
+      min_num_replicas: "{{ taskr_instances }}"
+      cool_down_period_sec: 120
+      cpu_utilization:
+        utilization_target: 0.7
+    zone: "{{ gcp_zone }}"
+    project: "{{ gcp_project }}"
+    auth_kind: "{{ auth_kind }}"
+    service_account_file: "{{ service_account_file }}"
+    state: present
+
+- name: Create a backend service
+  google.cloud.gcp_compute_backend_service:
+    name: "taskr-{{ item }}-backend-service"
+    backends:
+      - group: "{{ instancegroup.instanceGroup }}"
+        balancing_mode: "UTILIZATION"
+    health_checks:
+      - "{{ health_check.selfLink }}"
+    enable_cdn: 'false'
+    port_name: https
+    project: "{{ gcp_project }}"
+    auth_kind: "{{ auth_kind }}"
+    service_account_file: "{{ service_account_file }}"
+    state: present
+  register: backend_service
+
+- name: Create an global address
+  google.cloud.gcp_compute_global_address:
+    name: "taskr-{{ item }}-global-address"
+    project: "{{ gcp_project }}"
+    auth_kind: "{{ auth_kind }}"
+    service_account_file: "{{ service_account_file }}"
+    state: present
+  register: global_address
+
+- name: Set backend_load_balancer
+  ansible.builtin.set_fact:
+    backend_load_balancer: "{{ global_address }}"
+  when: item == "backend"
+
+- name: Create a URL map
+  google.cloud.gcp_compute_url_map:
+    name: "urlmap-{{ item }}-globalforwardingrule"
+    default_service: "{{ backend_service }}"
+    project: "{{ gcp_project }}"
+    auth_kind: "{{ auth_kind }}"
+    service_account_file: "{{ service_account_file }}"
+    state: present
+  register: urlmap
+
+- name: Create a target HTTP proxy
+  google.cloud.gcp_compute_target_http_proxy:
+    name: "targethttpproxy-{{ item }}-globalforwardingrule"
+    url_map: "{{ urlmap }}"
+    project: "{{ gcp_project }}"
+    auth_kind: "{{ auth_kind }}"
+    service_account_file: "{{ service_account_file }}"
+    state: present
+  register: httpproxy
+
+- name: Create a forwarding rule
+  google.cloud.gcp_compute_global_forwarding_rule:
+    name: "taskr-{{ item }}-forwarding-rule"
+    target: "{{ httpproxy.selfLink }}"
+    ip_protocol: TCP
+    port_range: "{{ port }}-{{ port }}"
+    ip_address: "{{ global_address.address }}"
+    project: "{{ gcp_project }}"
+    auth_kind: "{{ auth_kind }}"
+    service_account_file: "{{ service_account_file }}"
+    state: present

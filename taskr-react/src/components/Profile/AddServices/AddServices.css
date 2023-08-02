@@ -1,0 +1,155 @@
+.AddServices {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+ 
+
+.AddServices  .category-types  .service-info {
+    width: 90%;
+    height: 50px;
+    display: flex;
+    margin-bottom: 15px;
+    margin-left: 0%;
+    margin-right: 10%;
+}
+
+.AddServices  .category-types  .service-info .selected {
+    background-color: rgba(24, 212, 40, 0.514);
+    border: rgba(24, 212, 40, 0.719) solid;
+}
+
+.AddServices  .category-types .service-info button {
+    border-radius: 16px 16px;
+    font-weight: 700;
+    justify-content:center;
+}
+
+
+.AddServices .button-category {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.AddServices .button-category button {
+    border-radius: 16px 16px;
+    font-weight: 700;
+    width: 15%;
+    height: 45px;
+}
+
+.AddServices .selected button {
+    background-color: rgba(24, 212, 40, 0.514);
+    border: rgba(24, 212, 40, 0.719) solid;
+}
+
+.AddServices .service-description{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 2%;
+    height: 85%;
+}
+
+
+.AddServices .category-types .service-category {
+    width: 100%;
+    margin-bottom: 5%;
+    margin-top:5%;
+    height:80%;
+    overflow: auto;
+}
+
+.AddServices .category-types {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    gap: 15px;
+}
+
+
+.AddServices .category-title {
+    display: flex;
+    justify-content: center;
+}
+
+.AddServices .selected h3 {
+    text-decoration: underline;
+}
+
+.AddServices label {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.AddServices label input{
+    width: 40%;
+}
+
+.AddServices .add-type-service {
+    margin-left: 4%;
+    height: 100%;
+}
+
+.AddServices .btn-add-service button {
+    width: 120px;
+    border-radius: 12px 12px;
+    padding: 10px 0px;
+    margin-top: 4%;
+}
+
+.AddServices .btn-add-service {
+    display: flex;
+    gap: 65%;
+}
+
+.AddServices .add-type-service textarea {
+    overflow: hidden;
+    min-height: 100px;
+    max-height: 160px;
+    width: 70%;
+    height: auto;
+}
+
+.AddServices .gestor-service button{
+    width: 40%;
+    height: 50px;
+    margin-right: 10%;
+    margin-top: 2%;
+    justify-content:center;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.AddServices .service-duration{
+    display: flex;
+    flex-direction: column;
+}
+
+.AddServices .service-duration input{
+    width: 20%;
+}
+
+.AddServices .add-type-service .price input{
+    width: 20%;
+}
+
+.AddServices  .service-types-left{
+    width:30%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.AddServices .overflow-description{
+    overflow: auto;
+}

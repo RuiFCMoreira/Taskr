@@ -1,0 +1,91 @@
+.Footer{
+    margin-top: 100px;
+    background-color: rgb(240, 240, 240);
+    height: 200px;
+}
+
+.aligned-row{
+    display: flex;
+}
+
+
+.follow-us{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    width: 50%;
+    justify-content: center;
+}
+
+.follow-us h5{
+    font-size: 15px;
+}
+
+
+.follow-us img{
+    width: 35px;
+    margin-top: 20px;
+}
+
+.newsletter{
+    display: flex;
+    width: 50%;
+    justify-content: center;   
+    align-items: center;
+
+}
+
+.newsletter input{
+    width: 300px;
+}
+
+.newsletter h5{
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.newsletter input{
+    height: 30px;
+    margin-left: 10px;
+}
+
+.newsletter button{
+    margin-left: 10px;
+    height: 35px;
+    width: 100px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    border-radius: 7px;
+    width: 150px;
+    font-weight: 300;
+}
+
+.address{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.address p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
+}
+
+.Footer ul {
+    margin-top: 0;
+    margin-right: 20px;
+    list-style-type: none;
+    float: right;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    
+}
+
+.Footer li {
+    float:left;
+    padding-right: 1rem;
+}

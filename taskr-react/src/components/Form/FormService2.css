@@ -1,0 +1,214 @@
+.FormService2 .provider {
+    padding-top: 30px;
+    width: 40%;
+    margin: 2em auto;
+    display: flex;
+    border-style: solid;
+    border-radius: 10px 10px;
+    border-width: 2px 2px;
+}
+
+.FormService2 .reservation {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.FormService2 .profile-image-reservate{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
+
+.FormService2 .reservation .btn {
+    margin-top: 35%;
+    width: 70%;
+    padding: 15px;
+    border-radius: 15px 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.FormService2 .perfil {
+    padding-top: 15px;
+    cursor: pointer;
+}
+
+.FormService2 .description {
+    width: 100%;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.FormService2 .description  .name {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+ .description .name h3 {
+    margin-right: 30px;
+}
+
+.FormService2 .preco {
+    font-size: 24px;
+    font-weight: 500;
+    padding-right: 50px;
+}
+
+
+
+.FormService2 .container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 25px;
+}
+
+.FormService2 .container p {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    overflow-wrap: anywhere;
+    margin-right: 35px;
+}
+
+.FormService2 .container h3 {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 1px;
+}
+
+
+
+.FormService2 .container-button-grouporder{
+    width: 40%;
+    margin: 2em auto;
+    margin-top: 40px;
+    display: flex;
+}
+
+.FormService2 .container-button-grouporder button{
+    background-color: white;
+    border-radius: 5px;
+    float: left;
+    height: 80%;
+    
+}
+
+
+.FormService2 .container-button-grouporder  .groupOrder{
+    display: flex;
+    margin-left: 70%;
+
+}
+
+.FormService2 .groupOrder  .orderby {
+    width: 30%;
+    margin-left: 15px;
+}
+
+.FormService2 .groupOrder .order {
+    width: 30%;
+    font-size: larger;
+}
+
+.FormService2 .orderby select {
+    border-radius: 10px 10px;
+    margin-top: 9px;
+}
+
+.FormService2 .noProvider {
+    font-size: 25px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.FormService2 .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:none;
+}
+
+.FormService2 .pagination-button button{
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 5px 10px;
+}
+
+.FormService2 .pagination-button {
+    border: none;
+    background: none;
+    padding: 10px;
+}
+
+.FormService2 .pagination-button button:hover {
+    cursor: pointer;
+    border: 1px solid #000;
+}
+
+.FormService2 .previous-button:hover,
+.FormService2 .next-button:hover {
+    cursor: pointer;
+    border: 1px solid #000;
+}
+
+
+.FormService2 .pagination-button .current-page:hover {
+    border:none;
+    cursor: default;
+}
+
+.FormService2 .pagination .current-page:hover {
+    cursor: default;
+    border: none;
+}
+
+.FormService2 .previous-button,
+.FormService2 .next-button {
+    margin: 0 20px;
+    border-radius: 10px 10px;
+}
+
+.FormService2 .profile-image img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+}
+
+.FormService2 .profile-image {
+    display: flex;
+    justify-content: center;
+
+}
+
+.FormService2 .viewProfile{
+    text-decoration: none;
+    color: #000;
+    margin-bottom: 10px;
+}
+.FormService2 .profile-image-reservate button {
+    border: 1px solid black;
+    padding: 8px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.FormService2 .profile-image-reservate button:hover {
+    background-color: rgb(161, 161, 161);
+}
+
+
+.FormService2 .data img{
+    width: 3.5%;
+}

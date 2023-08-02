@@ -1,0 +1,147 @@
+.ServiceEdit{
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+
+
+.ServiceEdit .services-info {
+    width: 90%;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 4%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.ServiceEdit .service-info {
+    flex: 0 0 auto;
+    height: 320px;
+    width: 500px;
+    margin-right: 5%;
+    border: solid black;
+    border-radius: 20px 20px;
+    padding: 20px;
+    text-align: left;
+    overflow: auto;
+}
+
+.ServiceEdit .service-info p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    overflow-wrap: anywhere;
+}
+
+.ServiceEdit .service-info button {
+    width: 30%;
+    height: 50px;
+    margin-top: 2%;
+    justify-content:center;
+    background-color: white;
+    border-radius: 3px;
+}
+
+
+
+.ServiceEdit .button-category {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.ServiceEdit .button-category button {
+    border-radius: 16px 16px;
+    padding: 10px 15px;
+    font-weight: 700;
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 15%;
+}
+
+.ServiceEdit .selected {
+    background-color: rgba(24, 212, 40, 0.514);
+    border: rgba(24, 212, 40, 0.719) solid;
+}
+
+.ServiceEdit .service-name {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.ServiceEdit .service-name img {
+    height: auto;
+    width: 15%;
+}
+
+.ServiceEdit .service-name h3 {
+    font-size: 20px;
+}
+
+.ServiceEdit .selected {
+    background-color: rgba(24, 212, 40, 0.514);
+    border: rgba(24, 212, 40, 0.719) solid;
+}
+
+.ServiceEdit .btn-edit-service{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ServiceEdit .service-category {
+    text-align: center;
+    width: 100%;
+    border-radius: 25px 25px;
+    margin-bottom: 2%;
+}
+
+.ServiceEdit .service-category-info {
+    padding-top: 3%;
+}
+
+.ServiceEdit input {
+    width: 40%;
+}
+
+.ServiceEdit textarea {
+    overflow: hidden;
+    outline: none;
+    min-height: 30px;
+    max-height: 70px;
+    width: 90%;
+    height: auto;
+}
+
+.ServiceEdit .gestor-service button {
+    width: 120px;
+    border-radius: 12px 12px;
+    padding: 10px 0px;
+}
+
+.ServiceEdit .service-duration {
+    display: flex;
+    gap: 10px;
+}
+
+.ServiceEdit .service-duration input {
+    width: 20%;
+}
+
+.ServiceEdit label {
+    display: flex;
+    flex-direction: column;
+}
+
+.ServiceEdit .btn-update-service {
+    display: flex;
+    gap: 50%;
+    
+}
+
+.ServiceEdit .notSave{
+    cursor: not-allowed;
+}

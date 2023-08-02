@@ -1,0 +1,112 @@
+.TaskLocationDiv{
+    margin-top:50px;
+    width: 70%;
+    margin: 2em auto;
+    border-radius: 20px;
+    border-style: solid;
+    background-color: rgb(247, 246, 246);
+    padding: 25px;
+}
+
+.TaskLocationDiv h2{
+    margin-left: 2%;
+}
+
+.TaskLocationDiv1{
+    width: 100%;
+}
+
+.TaskLocationDiv1 .FormServiceAdress{
+    width: 40%;
+    height: 30px;
+    padding: auto;
+    margin-top: 2%;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.TaskLocationDiv1 .FormServiceNumberDoor{
+    width: 5%;
+    height: 30px;
+    padding: auto;
+    margin-right: 2%;
+}
+
+.TaskLocationDiv1 .FormServicePostalCode{
+    width: 10%;
+    height: 30px;
+    padding: auto;
+    margin-right: 2%;
+}
+
+.TaskLocationDiv2{
+    width: 100%;
+    height: 30px;
+    padding: auto;
+    margin-top: 1%;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.TaskLocationDiv2 .FormServiceParish{
+    width: 20%;
+    margin-right: 2%;
+}
+
+.TaskLocationDiv2 .FormServiceMunicipality{
+    width: 20%;
+    margin-right: 2%;
+}
+
+.TaskLocationDiv2 .FormServiceDistrict{
+    width: 20%;
+    margin-right: 2%;
+}
+
+.TaskDescriptionDiv{
+    margin-top:50px;
+    width: 70%;
+    margin: 2em auto;
+    border-radius: 10px;
+    border-style: solid;
+    background-color: rgb(247, 246, 246);
+    padding: 20px;
+}
+
+.TaskDescriptionDiv h2{
+    margin-left: 2%;
+}
+
+.TaskDescriptionDiv .FormServiceDescription{
+    width: 95%;
+    height: 200px;
+    padding: auto;
+    margin-top: 2%;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.formService1prev{
+    margin-left: 78%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.formService1next{
+    margin-left: 1%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+
+.dropdown-selection{
+    display: flex;
+    margin-left: 2%;
+    margin-top: 2%;
+    
+}
+
+.form-select{
+    width: 30%;
+    margin-right: 2%;
+}
